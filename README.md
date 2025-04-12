@@ -14,6 +14,17 @@ This repository contains a modernized approach to the concepts introduced in *Pa
    - [Chapter 6 - Session State](#chapter-6---session-state)
    - [Chapter 7 - Distribution Strategies](#chapter-7---distribution-strategies)
    - [Chapter 8 - Putting It All Together](#chapter-8---putting-it-all-together)
+3. [Part 2 - The Patterns](#part-2---the-patterns)
+   - [Chapter 9 - Domain Logic Patterns](#chapter-9---domain-logic-patterns)
+   - [Chapter 10 - Data Source Architectural Patterns](#chapter-10---data-source-architectural-patterns)
+   - [Chapter 11 - Object-Relational Behavioral Patterns](#chapter-11---object-relational-behavioral-patterns)
+   - [Chapter 12 - Object-Relational Structural Patterns](#chapter-12---object-relational-structural-patterns)
+   - [Chapter 13 - Object-Relational Metadata Mapping Patterns](#chapter-13---object-relational-metadata-mapping-patterns)
+   - [Chapter 14 - Web Presentation Patterns](#chapter-14---web-presentation-patterns)
+   - [Chapter 15 - Distribution Patterns](#chapter-15---distribution-patterns)
+   - [Chapter 16 - Offline Concurrency Patterns](#chapter-16---offline-concurrency-patterns)
+   - [Chapter 17 - Session State Patterns](#chapter-17---session-state-patterns)
+   - [Chapter 18 - Base Patterns](#chapter-18---base-patterns)
 
 ---
 
@@ -80,6 +91,108 @@ In this repository, we explore the fundamental patterns of enterprise applicatio
 **Modern Alternative:** In the modern era, **DevOps**, **CI/CD** pipelines, and **Infrastructure as Code (IaC)** tools such as **Terraform** or **AWS CloudFormation** allow for automated, scalable, and efficient application deployment and management.
 
 ---
+
+## Part 2 - The Patterns
+
+### Chapter 9 - Domain Logic Patterns
+**Traditional Focus:**  
+Includes patterns like Transaction Script, Table Module, and Domain Model to manage business logic.
+
+**Modern Alternative:**
+- **CQRS** and **Event Sourcing** for complex logic and separation of concerns.
+- **Serverless Functions** and **microservices** to encapsulate business logic more flexibly.
+
+---
+
+### Chapter 10 - Data Source Architectural Patterns
+**Traditional Focus:**  
+Covers patterns like Table Data Gateway, Row Data Gateway, Active Record, and Data Mapper to abstract database access.
+
+**Modern Alternative:**
+- **ORMs** like Hibernate or Entity Framework
+- **NoSQL** alternatives and **Repository Pattern** with Dependency Injection.
+
+---
+
+### Chapter 11 - Object-Relational Behavioral Patterns
+**Traditional Focus:**  
+Handles issues related to loading and saving object graphs (e.g., Lazy Load, Unit of Work, Identity Map).
+
+**Modern Alternative:**
+- **GraphQL** for fine-grained data fetching.
+- **Reactive persistence** using tools like **Spring Data R2DBC**.
+
+---
+
+### Chapter 12 - Object-Relational Structural Patterns
+**Traditional Focus:**  
+Focuses on mapping object structures to relational tables (e.g., Association Table Mapping, Embedded Value, Inheritance Mapping).
+
+**Modern Alternative:**
+- Still largely relevant, especially when working with relational databases.
+- **NoSQL** databases and **document models** may eliminate the need for complex structural mappings.
+
+---
+
+### Chapter 13 - Object-Relational Metadata Mapping Patterns
+**Traditional Focus:**  
+Uses metadata (e.g., XML, annotations) to map between objects and databases.
+
+**Modern Alternative:**
+- **Annotations** in Java (JPA) and C# (EF) are common.
+- **Schema-as-code** tools like **Liquibase** or **Flyway** support versioned DB migrations.
+
+---
+
+### Chapter 14 - Web Presentation Patterns
+**Traditional Focus:**  
+Includes MVC, Front Controller, Template View, and Transform View for presenting data on the web.
+
+**Modern Alternative:**
+- **Client-side frameworks** like React, Angular, Vue.
+- **GraphQL APIs** for flexible data querying.
+- **Backend for Frontend (BFF)** patterns for UI-specific logic.
+
+---
+
+### Chapter 15 - Distribution Patterns
+**Traditional Focus:**  
+Includes patterns like Remote Facade and Data Transfer Object for managing communication across network boundaries.
+
+**Modern Alternative:**
+- **API Gateways**, **gRPC**, **REST APIs**, and **Protobuf**.
+- **Service Meshes** (e.g., Istio) and **Event Brokers** (Kafka, RabbitMQ) for microservice communication.
+
+---
+
+### Chapter 16 - Offline Concurrency Patterns
+**Traditional Focus:**  
+Deals with concurrency using patterns like Optimistic and Pessimistic Locking.
+
+**Modern Alternative:**
+- Still relevant.
+- Modern DBs and distributed systems often use **eventual consistency** or **versioning strategies**.
+
+---
+
+### Chapter 17 - Session State Patterns
+**Traditional Focus:**  
+Patterns for managing user session state (e.g., Client Session, Server Session, Database Session).
+
+**Modern Alternative:**
+- **Stateless Authentication** with **JWTs**, **OAuth2**.
+- **Distributed Caching** (e.g., Redis) for session data at scale.
+
+---
+
+### Chapter 18 - Base Patterns
+**Traditional Focus:**  
+Foundational patterns like Layer Supertype, Separated Interface, Registry.
+
+**Modern Alternative:**
+- **Dependency Injection Containers**, **Interface Segregation**, and **IoC frameworks** (e.g., Spring, .NET Core) encapsulate many of these responsibilities.
+
+
 
 ## License
 
